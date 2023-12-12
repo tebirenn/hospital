@@ -13,7 +13,7 @@ class Service(models.Model):
 
 class Schedule(models.Model):
     start = models.DateTimeField()
-    end = models.DateTimeField()
+    end = models.DateTimeField(null=True)
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
 
 class Visit(models.Model):

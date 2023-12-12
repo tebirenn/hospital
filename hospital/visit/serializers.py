@@ -3,15 +3,15 @@ from .models import *
 
 class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
-        models = Service
+        model = Service
         fields = '__all__'
 
 class ScheduleSerializer(serializers.ModelSerializer):
     class Meta:
-        models = Schedule
+        model = Schedule
         fields = '__all__'
 
 class VisitSerializer(serializers.ModelSerializer):
     class Meta:
-        models = Visit
+        model = Visit
         fields = '__all__'
