@@ -6,13 +6,6 @@ from django.contrib.auth.models import User
 from .models import Service, Schedule, Visit
 from notifications.models import Notification
 
-@receiver(post_save, sender=Service)
-def post_save_service(created, **kwargs):
-    if created:
-        print('Сервис был создан!')
-    else:
-        print('Сервис был обновлен!')
-
 @receiver(pre_save, sender=Schedule)
 def pre_save_schedule(instance, **kwargs):
     instance.end = instance.start + timezone.timedelta(hours=1)
